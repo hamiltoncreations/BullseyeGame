@@ -15,6 +15,10 @@
 		4658C9CA268BF7AD004077BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4658C9C9268BF7AD004077BC /* Assets.xcassets */; };
 		4658C9CD268BF7AD004077BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4658C9CC268BF7AD004077BC /* Preview Assets.xcassets */; };
 		4658C9D0268BF7AD004077BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4658C9CE268BF7AD004077BC /* LaunchScreen.storyboard */; };
+		4660509126921B3E00FC403D /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660509026921B3E00FC403D /* TextViews.swift */; };
+		466050A12692264F00FC403D /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466050A02692264F00FC403D /* Shapes.swift */; };
+		466050A52692320F00FC403D /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466050A42692320F00FC403D /* RoundedViews.swift */; };
+		46ACB894269239A600CDA04A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ACB893269239A600CDA04A /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		4658C9CC268BF7AD004077BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4658C9CF268BF7AD004077BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4658C9D1268BF7AD004077BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4660509026921B3E00FC403D /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		466050A02692264F00FC403D /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		466050A42692320F00FC403D /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		46ACB893269239A600CDA04A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				4658C9C7268BF7A9004077BC /* ContentView.swift */,
+				4660509026921B3E00FC403D /* TextViews.swift */,
+				466050A02692264F00FC403D /* Shapes.swift */,
+				466050A42692320F00FC403D /* RoundedViews.swift */,
+				46ACB893269239A600CDA04A /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,8 +257,12 @@
 			files = (
 				4658C9C4268BF7A9004077BC /* AppDelegate.swift in Sources */,
 				4658C9C6268BF7A9004077BC /* SceneDelegate.swift in Sources */,
+				46ACB894269239A600CDA04A /* BackgroundView.swift in Sources */,
 				4658C9C8268BF7A9004077BC /* ContentView.swift in Sources */,
+				4660509126921B3E00FC403D /* TextViews.swift in Sources */,
+				466050A52692320F00FC403D /* RoundedViews.swift in Sources */,
 				46552873268D57EF00F250A7 /* Game.swift in Sources */,
+				466050A12692264F00FC403D /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RayWenderlichBullsEye/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -448,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RayWenderlichBullsEye/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
