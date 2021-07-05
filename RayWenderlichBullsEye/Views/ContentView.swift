@@ -18,12 +18,12 @@ struct ContentView: View {
         ZStack {
             BackgroundView(game: $game)
             VStack {
-                InstructionsView(game: $game)
-                SliderView(sliderValue: $sliderValue)
+                InstructionsView(game: $game).padding(.bottom, 100)
                 HitMeButtonView(alertIsVisible: $alertIsVisible,
                                 sliderValue: $sliderValue,
                                 game: $game)
             }
+            SliderView(sliderValue: $sliderValue)
         }
     }
 }
@@ -81,10 +81,14 @@ struct HitMeButtonView: View {
         )
         .alert(isPresented: $alertIsVisible, content: {
             let roundedValue: Int = Int(self.sliderValue.rounded())
+            let points = self.game.points(sliderValue: roundedValue)
             return Alert(title: Text("Hello There!"),
                          message: Text("The slider's value is  \(roundedValue).\n" +
-                            "You scored \(self.game.points(sliderValue: roundedValue)) points this round"),
-                         dismissButton: .default(Text("Nice")))
+                            "You scored \(points) points this round"),
+                         dismissButton: .default(Text("Nice")) {
+                            game.startNewRound(points: points)
+                         }
+            )
         })
     }
 }
