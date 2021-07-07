@@ -18,12 +18,21 @@ struct ContentView: View {
         ZStack {
             BackgroundView(game: $game)
             VStack {
-                InstructionsView(game: $game).padding(.bottom, 100)
-                HitMeButtonView(alertIsVisible: $alertIsVisible,
+                InstructionsView(game: $game).padding(.bottom, alertIsVisible ? 0 : 100)
+                if alertIsVisible {
+                    PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+                        .transition(.scale)
+                } else {
+                    HitMeButtonView(alertIsVisible: $alertIsVisible,
                                 sliderValue: $sliderValue,
                                 game: $game)
+                        .transition(.scale)
+                }
             }
-            SliderView(sliderValue: $sliderValue)
+            if !alertIsVisible {
+                SliderView(sliderValue: $sliderValue)
+                    .transition(.scale)
+            }
         }
     }
 }
@@ -61,7 +70,9 @@ struct HitMeButtonView: View {
     
     var body: some View {
         Button(action: {
-            self.alertIsVisible = true
+            withAnimation {
+                self.alertIsVisible = true
+            }
         }) {
             Text("Hit Me".uppercased())
                 .bold().font(.title3)
@@ -74,22 +85,11 @@ struct HitMeButtonView: View {
             }
         )
         .foregroundColor(Color(.white))
-        .cornerRadius(21.0)
+        .cornerRadius(Constants.General.roundRectViewCornerRadius)
         .overlay(
-            RoundedRectangle(cornerRadius: 21.0)
-                .strokeBorder(Color.white, lineWidth: 2.0)
+            RoundedRectangle(cornerRadius: Constants.General.roundRectViewCornerRadius)
+                .strokeBorder(Color.white, lineWidth: Constants.General.strokeWidth)
         )
-        .alert(isPresented: $alertIsVisible, content: {
-            let roundedValue: Int = Int(self.sliderValue.rounded())
-            let points = self.game.points(sliderValue: roundedValue)
-            return Alert(title: Text("Hello There!"),
-                         message: Text("The slider's value is  \(roundedValue).\n" +
-                            "You scored \(points) points this round"),
-                         dismissButton: .default(Text("Nice")) {
-                            game.startNewRound(points: points)
-                         }
-            )
-        })
     }
 }
 

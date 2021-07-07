@@ -19,6 +19,7 @@
 		466050A12692264F00FC403D /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466050A02692264F00FC403D /* Shapes.swift */; };
 		466050A52692320F00FC403D /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466050A42692320F00FC403D /* RoundedViews.swift */; };
 		468E3A082695321300B91F98 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E3A072695321300B91F98 /* PointsView.swift */; };
+		468E3A10269545FA00B91F98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E3A0F269545FA00B91F98 /* Constants.swift */; };
 		46ACB894269239A600CDA04A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ACB893269239A600CDA04A /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		466050A02692264F00FC403D /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		466050A42692320F00FC403D /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		468E3A072695321300B91F98 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		468E3A0F269545FA00B91F98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46ACB893269239A600CDA04A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				46552872268D57EF00F250A7 /* Game.swift */,
+				468E3A0F269545FA00B91F98 /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				466050A52692320F00FC403D /* RoundedViews.swift in Sources */,
 				46552873268D57EF00F250A7 /* Game.swift in Sources */,
 				466050A12692264F00FC403D /* Shapes.swift in Sources */,
+				468E3A10269545FA00B91F98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

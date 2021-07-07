@@ -9,15 +9,25 @@
 import SwiftUI
 
 struct PointsView: View {
-    @State var sliderValue: Int
-    @State var points: Int
+    @Binding var alertIsVisible: Bool
+    @Binding var sliderValue: Double
+    @Binding var game: Game
     
     var body: some View {
+        let roundedValue = Int(sliderValue.rounded())
+        let points = game.points(sliderValue: roundedValue)
+        
         VStack (spacing:10.0) {
             InstructionText(text: "The sliders value is")
-            BigNumberText(text: String(sliderValue))
+            BigNumberText(text: String(roundedValue))
             BodyText(text: "You scored \(points) points\n🎉🎉🎉")
-            Button(action:{}) {
+            Button(action:{
+                withAnimation {
+                    alertIsVisible = false
+                }
+                game.startNewRound(points: points)
+                
+            }) {
                 ButtonText(text: "Start New Round")
             }
         }
@@ -26,21 +36,23 @@ struct PointsView: View {
         .background(
             Color("BackgroundColor")
         )
-        .cornerRadius(21.0)
+        .cornerRadius(Constants.General.roundRectViewCornerRadius)
         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 5, y: 5)
+        .transition(.scale)
     }
 }
 
 struct PointsView_Previews: PreviewProvider {
+    static private var alertIsVisible = Binding.constant(false)
+    static private var sliderValue = Binding.constant(50.0)
+    static private var game = Binding.constant(Game())
+    
     static var previews: some View {
-        let sliderValue = 99
-        let points = 54
-        
-        PointsView(sliderValue: sliderValue, points: points)
-        PointsView(sliderValue: sliderValue, points: points)
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game)
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game)
             .preferredColorScheme(.dark)
         
-        PointsView(sliderValue: sliderValue, points: points).previewLayout(.fixed(width: 528, height: 320))
-        PointsView(sliderValue: sliderValue, points: points).previewLayout(.fixed(width: 528, height: 320)).preferredColorScheme(.dark)
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).previewLayout(.fixed(width: 528, height: 320))
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).previewLayout(.fixed(width: 528, height: 320)).preferredColorScheme(.dark)
     }
 }
