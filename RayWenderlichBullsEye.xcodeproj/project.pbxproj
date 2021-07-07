@@ -18,6 +18,7 @@
 		4660509126921B3E00FC403D /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660509026921B3E00FC403D /* TextViews.swift */; };
 		466050A12692264F00FC403D /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466050A02692264F00FC403D /* Shapes.swift */; };
 		466050A52692320F00FC403D /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466050A42692320F00FC403D /* RoundedViews.swift */; };
+		468E3A082695321300B91F98 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E3A072695321300B91F98 /* PointsView.swift */; };
 		46ACB894269239A600CDA04A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ACB893269239A600CDA04A /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		4660509026921B3E00FC403D /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		466050A02692264F00FC403D /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		466050A42692320F00FC403D /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		468E3A072695321300B91F98 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		46ACB893269239A600CDA04A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				466050A02692264F00FC403D /* Shapes.swift */,
 				466050A42692320F00FC403D /* RoundedViews.swift */,
 				46ACB893269239A600CDA04A /* BackgroundView.swift */,
+				468E3A072695321300B91F98 /* PointsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				4658C9C4268BF7A9004077BC /* AppDelegate.swift in Sources */,
 				4658C9C6268BF7A9004077BC /* SceneDelegate.swift in Sources */,
+				468E3A082695321300B91F98 /* PointsView.swift in Sources */,
 				46ACB894269239A600CDA04A /* BackgroundView.swift in Sources */,
 				4658C9C8268BF7A9004077BC /* ContentView.swift in Sources */,
 				4660509126921B3E00FC403D /* TextViews.swift in Sources */,
